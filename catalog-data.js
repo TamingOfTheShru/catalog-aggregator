@@ -23,8 +23,8 @@ class Product {
 }
 
 // Constants
-const MAX_CATS = 10;
-const MAX_PRODUCTS = 50;
+const MAX_CATS = 2;
+const MAX_PRODUCTS = 4;
 const MIN_PRICE = 100;
 const MAX_PRICE = 50000;
 
@@ -55,7 +55,7 @@ for (let i = 0; i < numLevel1Categories; i++) {
             let numProducts = Math.floor(Math.random() * MAX_PRODUCTS) + 1;
             for (let l = 0; l < numProducts; l++) {
                 // Random price between MIN_PRICE and MAX_PRICE
-                let randomPrice = Math.round(Math.random() * (MAX_PRICE - MIN_PRICE + 1))+ MIN_PRICE;
+                let randomPrice = Math.round(Math.random() * (MAX_PRICE - MIN_PRICE + 1)) + MIN_PRICE;
                 level3Cat.addChild(new Product(`L1_${i+1}_L2_${j+1}_L3_${k+1}_P${l+1}`, randomPrice));
             }
         }
